@@ -1,0 +1,45 @@
+#N canvas 260 50 916 698 10;
+#X obj 296 270 readsf~;
+#X msg 356 227 0;
+#X msg 316 220 1;
+#X msg 295 162 open recordings/oscRipples.wav;
+#X obj 308 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 226 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 169 264 osc~ 0.125;
+#X obj 226 229 f 90;
+#X obj 221 327 *~;
+#X obj 149 312 *~ 0.5;
+#X obj 90 263 osc~ 0.0625;
+#X obj 374 254 delay 25;
+#X obj 297 132 loadbang;
+#X obj 67 99 inlet;
+#X text 55 64 bang to start;
+#X text 154 62 bang to stop & reset;
+#X obj 162 101 inlet;
+#X obj 234 417 outlet~;
+#X obj 601 101 cnv 15 63 63 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 638 118 the;
+#X text 626 132 other;
+#X text 632 145 side;
+#X connect 0 0 8 1;
+#X connect 1 0 0 0;
+#X connect 1 0 11 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 9 0;
+#X connect 7 0 6 1;
+#X connect 7 0 10 1;
+#X connect 8 0 17 0;
+#X connect 9 0 8 0;
+#X connect 10 0 9 0;
+#X connect 11 0 3 0;
+#X connect 12 0 3 0;
+#X connect 13 0 4 0;
+#X connect 16 0 1 0;
+#X coords 0 -1 1 1 65 65 1 600 100;
